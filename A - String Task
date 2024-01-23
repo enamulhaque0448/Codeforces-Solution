@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define optimized() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define endl '\n'
+#define r return
+ 
+bool isvowel(char ch) {
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'y');
+}
+ 
+int main() {
+    optimized();
+    string s, check;
+    cin >> s;
+ 
+    for (auto i : s) {
+        char ch = tolower(i); 
+        if (!isvowel(ch)) {
+            check += '.';
+            check += ch;
+        }
+    }
+ 
+    cout << check << endl;
+    r 0;
+}
