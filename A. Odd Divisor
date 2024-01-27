@@ -1,0 +1,27 @@
+/*Enamul*/
+#include<bits/stdc++.h>
+using namespace std;
+#define optimized() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl '\n'
+#define ll long long
+int main() {
+    optimized();
+    ll t;
+    cin>>t;
+    while(t--){
+        ll n;
+        cin>>n;//the power of 2 is never 
+        if((n&(n-1))==0){
+            cout<<"NO"<<endl;
+        }
+        else cout<<"YES"<<endl;
+        }
+    return 0;
+}
+/*//odd numbers are always true;
+    2 4 6 12 -here,2 and 4 don't have odd divisor but6 and 12;hence it is clear the the 
+    numbers with power of two dont't provide odd dividor;
+    to know if the number is power of two we use bitwise & with the number and it't previous one
+    if all the bits are zero then it is power of 2 and answere is false;
+    8&(8-1)===1000&0111=0000*/
+
