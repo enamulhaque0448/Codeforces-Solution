@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define optimized() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl '\n'
+
+int main() {
+    optimized();
+    string s,t;
+    cin>>s>>t;
+    int count=0;
+    while(true){//when count=0 go to last index of s&t
+        int i=s.length()-count-1;//when count=1 go to 2nd last index of s&t
+        int j=t.length()-count-1;//
+        if(i>=0 && j>=0 && s[i]==t[j]){//starting from last index of s&t;
+            count++;//if match found increment the count;
+        }
+        else break;
+    }
+    int result=s.length()+t.length()-2*count;//multiplied by 2 cz we actually substracting double of count;
+    cout<<result<<endl;
+    return 0;
+}
+
